@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.strona {
+  min-height: 100vh;
+  padding: 20px 0;
+  background: #080808;
+}
+
+.kontener {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.naglowek,
+.ustawienia,
+.powitanie-uzytkownika {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.naglowek {
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #e6a8bf;
+  background: #111;
+}
+
+.naglowek h1,
+.powitanie-uzytkownika p {
+  margin: 0;
+}
+
+.naglowek h1 {
+  font-size: 24px;
+  color: #f6c1d3;
+}
+
+.powitanie-uzytkownika p {
+  font-size: 13px;
+}
+
+.przycisk,
+.przycisk-przedstaw,
+.pole-szukania {
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
+.przycisk,
+.przycisk-przedstaw {
+  border-color: #e6a8bf;
+  background: #f6c1d3;
+  color: #222;
+  cursor: pointer;
+}
+
+.pole-szukania {
+  width: 145px;
+  background: white;
+  color: #222;
+}
+
+.pole-szukania:focus {
+  outline: 2px solid #ddd;
+}
+
+.sekcja-katalogu {
+  width: calc(100vw - 40px);
+  margin: 16px 0 16px calc(50% - 50vw + 20px);
+  padding: 20px;
+  border: 1px solid #e6a8bf;
+  background: #111;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+}
+
+.kolumny-anime {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(60px, 18vw, 260px);
+}
+
+.lista-anime {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.anime {
+  height: 220px;
+  padding: 10px;
+  border: 1px solid #e6a8bf;
+  background: #f6c1d3;
+  color: #222;
+}
+
+.anime span {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #fff0f5;
+  color: #555;
+  font-size: 12px;
+}
+
+.anime h3 {
+  margin: 8px 0;
+  font-size: 17px;
+}
+
+.anime p,
+.ciekawostka p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ciekawostka {
+  margin-top: 16px;
+  padding: 20px;
+  border: 1px solid #e6a8bf;
+  background: #f6c1d3;
+  color: #222;
+  text-align: center;
+}
+
+.ciekawostka h2 {
+  margin-bottom: 8px;
+}
+
+.jasna {
+  background: #f2f2f2;
+  color: #222;
+}
+
+.jasna .naglowek,
+.jasna .sekcja-katalogu {
+  border-color: #ccc;
+  background: white;
+}
+
+.jasna .pole-szukania {
+  border-color: #999;
+  background: white;
+}
+
+.jasna .przycisk,
+.jasna .przycisk-przedstaw {
+  border-color: #999;
+  background: #eee;
+}
+
+@media (max-width: 650px) {
+  .naglowek,
+  .ustawienia {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .kolumny-anime {
+    gap: 12px;
+  }
+
+  .anime {
+    height: 250px;
+  }
+
+  .sekcja-katalogu {
+    width: 100%;
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .kolumny-anime {
+    grid-template-columns: 1fr;
+  }
+
+  .anime {
+    height: 280px;
+  }
+}
